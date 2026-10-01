@@ -1,0 +1,15 @@
+# TTSBatch 自身的第三方依赖（只用这几个，torch 等由 IndexTTS2 自带）
+#
+# 重要：这些包必须装进【运行本服务的那个 Python】里。
+# 最省事的做法是直接用 IndexTTS2 便携版自带的解释器：
+#     D:\IndexTTS2_portable\python\python.exe -m pip install -r requirements.txt
+#
+# 注意版本兼容性：torch / numpy 建议沿用 IndexTTS2 自带版本，不要随意升级。
+
+fastapi>=0.110
+uvicorn>=0.27
+pydantic>=2.0
+python-multipart>=0.0.9
+
+# 可选：导出 MP3 / M4A 以及调整语速时需要 ffmpeg（PATH 中有即可，无需 pip 安装）
+# 可选：调音频时长时需要 soundfile

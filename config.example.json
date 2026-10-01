@@ -1,0 +1,25 @@
+{
+  "_comment": "复制本文件为 config.json 后按需修改。config.json 已被 .gitignore 忽略，不会误提交。",
+
+  "index_tts2_dir": "",
+  "_index_tts2_dir_note": "IndexTTS2 根目录（内含 indextts/、checkpoints/）。便携版通常是 <目录>\\python\\python.exe 所在的那一层。升级 IndexTTS2 后改这里。留空则自动搜索。",
+
+  "auto_detect_index_tts2": true,
+  "_auto_detect_note": "为 true 时会在 index_tts2_dir 之外自动寻找其它 IndexTTS2 安装目录",
+
+  "host": "0.0.0.0",
+  "port": 7861,
+  "_port_note": "host 必须是 0.0.0.0 手机才能连上；端口与原版 IndexTTS2 的 7860 错开以免冲突",
+
+  "api_token": "",
+  "_token_note": "留空表示手机端 API 不校验。仅在可信局域网内可留空；公网暴露务必填写。",
+
+  "use_fp16": true,
+  "cuda_kernel": null,
+  "_cuda_kernel_note": "null 表示自动。可填 true/false。",
+
+  "export_dir": "",
+  "_export_dir_note": "「另存到目录」的预设值，填绝对路径。合成完成后自动复制一份过去。留空则只存到 work\\outputs\\。以下生成参数同样可预设，会作为网页表单的初始值：voice / chunk_chars / hard_max_chars / gap_ms / output_format / temperature / top_p / top_k / num_beams 等。网页上改过之后以网页的为准。",
+
+  "log_level": "info"
+}
